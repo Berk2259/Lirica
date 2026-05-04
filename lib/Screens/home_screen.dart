@@ -115,7 +115,7 @@ class HomeContainer extends StatelessWidget {
           height: 100,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            color: Colors.blueGrey.shade300,
+            color: Colors.black,
             boxShadow: [
               BoxShadow(
                 color: Colors.black26,
@@ -138,15 +138,23 @@ class HomeContainer extends StatelessWidget {
                     child: Image.asset(icon, scale: 12, color: Colors.white),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 16.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(title, style: TextStyle(fontSize: 22)),
-                      Text(description, style: TextStyle(fontSize: 15)),
-                    ],
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 16.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          title,
+                          style: TextStyle(fontSize: 22, color: iconColor),
+                        ),
+                        Text(
+                          description,
+                          style: TextStyle(fontSize: 15, color: Colors.white),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
