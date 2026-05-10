@@ -30,7 +30,7 @@ class SairlerYazarlarScreen extends StatelessWidget {
                 SairlerYazarlarContainer(title: 'Orhan Veli Kanık'),
                 SairlerYazarlarContainer(title: 'Sabahattin Ali'),
                 SairlerYazarlarContainer(title: 'Halit Ziya Uşaklıgil'),
-                 Text(
+                Text(
                   'Dünya Edebiyatı',
                   style: TextStyle(
                     color: Colors.red,
@@ -57,6 +57,7 @@ class SairlerYazarlarScreen extends StatelessWidget {
 
 class SairlerYazarlarContainer extends StatelessWidget {
   final String title;
+
   const SairlerYazarlarContainer({super.key, required this.title});
 
   @override
@@ -89,7 +90,20 @@ class SairlerYazarlarContainer extends StatelessWidget {
                 ),
               ),
               SizedBox(width: 10),
-              Text(title, style: TextStyle(color: Colors.white, fontSize: 24)),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                  Text(
+                    'Bilgileri görüntülemek için tıklayın',
+                    style: TextStyle(color: Colors.white, fontSize: 12),
+                  ),
+                ],
+              ),
             ],
           ),
         ),

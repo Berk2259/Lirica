@@ -22,10 +22,10 @@ class SozlerDetailScreen extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
                       width: double.infinity,
-                      height: 100,
+                      height: 130,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Colors.blueGrey.shade300,
+                        color: Colors.blueGrey.shade900,
                         boxShadow: [
                           BoxShadow(
                             color: Colors.black26,
@@ -34,12 +34,57 @@ class SozlerDetailScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(ozlu_sozler.text, textAlign: TextAlign.center),
-                          Text('- ${ozlu_sozler.author} -'),
-                        ],
+                      child: IntrinsicHeight(
+                        child: Row(
+                          children: [
+                            Container(
+                              width: 30,
+                              decoration: BoxDecoration(
+                                color: ozlu_sozler.color,
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(25),
+                                  bottomLeft: Radius.circular(25),
+                                ),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black26,
+                                    blurRadius: 8,
+                                    offset: Offset(0, 6),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Expanded(
+                              child: Padding(
+                                padding: const EdgeInsets.all(16.0),
+                                child: Column(
+                           
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      ozlu_sozler.text,
+                                      textAlign: TextAlign.center,
+
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                    Text(
+                                      textAlign: TextAlign.center,
+                                      '- ${ozlu_sozler.author} -',                                    
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 14,
+                                        
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   );
